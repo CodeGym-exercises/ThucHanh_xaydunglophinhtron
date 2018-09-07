@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let Circle = function(rad,col){
+			this.radius	= rad;
+			this.color = col;
+
+			this.setCircle = function(r,c){
+				this.radius = r;
+				this.color = c;
+			}
+			this.getRadius = function(){
+				return this.radius;
+			}
+			this.getColor = function(){
+				return this.color;
+			}
+			this.getArea = function(){
+				return 3.14 * this.getRadius() * this.getRadius();
+			}
+			this.show = function(){
+				console.log("color: " + 
+					this.getColor()+", radius: "+
+					this.getRadius()+", area: " + 
+					this.getArea());
+			}
+		}
+
+		let tron1 = new Circle();
+		tron1.setCircle(5,"red");
+		tron1.show();
+	</script>
+</body>
+</html>
